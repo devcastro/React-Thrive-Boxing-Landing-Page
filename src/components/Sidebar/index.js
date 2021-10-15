@@ -1,19 +1,21 @@
 import React from 'react'
+import {SidebarContainer, Icon, CloseIcon, SidebarMenu, SidebarLink, SidebarBtnWrap, SidebarRoute} from './SidebarElements';
 
-function Sidebar() {
+const Sidebar = ({isOpen, toggle}) => {
     return (
-        <SidebarContainer>
-          <Icon>
+        <SidebarContainer isOpen={isOpen} onClick={toggle}>
+          <Icon onClick={toggle}>
               <CloseIcon />
           </Icon>
           <SidebarMenu>
-            <SidebarLink to="/"> Gloves </SidebarLink>
-            <SidebarLink to="/"> Gear </SidebarLink>
-            <SidebarLink to="/"> About </SidebarLink>
+            <SidebarLink to="/">Gloves</SidebarLink>
+            <SidebarLink to="/">Gear</SidebarLink>
+            <SidebarLink to="/">Cart</SidebarLink>
+            <SidebarLink to="/">About</SidebarLink>
           </SidebarMenu>
-          <SideBtnWrap>
+          <SidebarBtnWrap>
               <SidebarRoute to="/">Order Now</SidebarRoute>
-          </SideBtnWrap>
+          </SidebarBtnWrap>
         </SidebarContainer>
 
     )
