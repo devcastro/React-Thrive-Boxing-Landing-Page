@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { FeatureContainer, FeatureButton } from './FeatureElements'
 
 const Feature = () => {
@@ -13,4 +13,4 @@ const Feature = () => {
     )
 }
 
-export default Feature
+export default Feature;
