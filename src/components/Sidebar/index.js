@@ -1,6 +1,12 @@
 import React from 'react';
 import {
-    SidebarContainer, Icon, CloseIcon, SidebarMenu, SidebarLink, SidebarBtnWrap, SidebarRoute} from './SidebarElements.js';
+    SidebarContainer, 
+    Icon, 
+    CloseIcon, 
+    SidebarMenu, 
+    SidebarLink, 
+    SidebarBtnWrap, 
+    SidebarRoute} from './SidebarElements';
 
 const Sidebar = ({isOpen, toggle}) => {
     return (
