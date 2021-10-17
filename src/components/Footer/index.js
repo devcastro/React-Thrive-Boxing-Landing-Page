@@ -22,15 +22,15 @@ const Footer = () => {
       <FooterWrap>
         <SocialMedia>
           <SocialMediaWrap>
-            <SocialLogo to='#/'>Thrive Boxing Co.</SocialLogo>
+            <SocialLogo to='/#'>Thrive Boxing Co.</SocialLogo>
             <SocialIcons>
-              <SocialIconLink href='#/' target='_blank' aria-label='Facebook'>
+              <SocialIconLink href='/#' target='_blank' aria-label='Facebook'>
                 <FaFacebook />
               </SocialIconLink>
               <SocialIconLink href='//www.instagram.com/thriveboxingco' target='_blank' aria-label='Instagram'>
                 <FaInstagram />
               </SocialIconLink>
-              <SocialIconLink href='#/' target='_blank' aria-label='Youtube'>
+              <SocialIconLink href='/#' target='_blank' aria-label='Youtube'>
                 <FaYoutube />
               </SocialIconLink>
               <SocialIconLink
@@ -41,7 +41,7 @@ const Footer = () => {
               >
                 <FaTwitter />
               </SocialIconLink>
-              <SocialIconLink href='#/' target='_blank' aria-label='Linkedin'>
+              <SocialIconLink href='/#' target='_blank' aria-label='Linkedin'>
                 <FaLinkedin />
               </SocialIconLink>
             </SocialIcons>

@@ -15,13 +15,13 @@ const Sidebar = ({isOpen, toggle}) => {
               <CloseIcon />
           </Icon>
           <SidebarMenu>
-            <SidebarLink to="#/">Gloves</SidebarLink>
-            <SidebarLink to="#/">Gear</SidebarLink>
-            <SidebarLink to="#/">Cart</SidebarLink>
-            <SidebarLink to="#/">About</SidebarLink>
+            <SidebarLink to="/#">Gloves</SidebarLink>
+            <SidebarLink to="/#">Gear</SidebarLink>
+            <SidebarLink to="/#">Cart</SidebarLink>
+            <SidebarLink to="/#">About</SidebarLink>
           </SidebarMenu>
           <SidebarBtnWrap>
-              <SidebarRoute to="#/">Order Now</SidebarRoute>
+              <SidebarRoute to="/#">Order Now</SidebarRoute>
           </SidebarBtnWrap>
         </SidebarContainer>
 
