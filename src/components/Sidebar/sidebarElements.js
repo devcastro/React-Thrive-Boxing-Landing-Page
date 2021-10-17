@@ -64,7 +64,7 @@ export const SidebarLink = styled(Link)`
 }
 `
 
-export const SidebarBtnWrap = styled(Link)`
+export const SidebarBtnWrap = styled.div`
     background: flex;
     justify-content: center;
 `
