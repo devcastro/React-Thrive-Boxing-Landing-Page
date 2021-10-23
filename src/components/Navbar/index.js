@@ -1,7 +1,7 @@
 import React from 'react';
 import { Nav, NavLink, NavIcon, Bars } from './NavbarElements';
-import { IconButton, Typography, Badge } from '@material-ui/core';
-import { ShoppingCart } from '@material-ui/icons';
+import { Badge } from '@material-ui/core';
+//import { ShoppingCart } from '@material-ui/icons';
 
 const Navbar = ({ toggle }) => {
     return (
