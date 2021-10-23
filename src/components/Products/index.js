@@ -10,7 +10,7 @@ import {
     ProductDesc,
     ProductPrice,
     ProductButton
-} from './ProductsElements'
+} from './ProductsElements';
 
 const Products = ({heading, data}) => {
     return (
@@ -30,7 +30,7 @@ const Products = ({heading, data}) => {
                             </ProductInfo>
                         </ProductCard>
                     )
-                })}
+                })};
             </ProductWrapper>
 
         </ProductsContainer>

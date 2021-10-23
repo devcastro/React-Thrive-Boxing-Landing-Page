@@ -6,6 +6,9 @@ import Products from './components/Products';
 import { productData } from './components/Products/data';
 import Feature from './components/Feature';
 import Footer from './components/Footer';
+import ProductCard from './components/Products/Products.jsx';
+
+
 
 function App() {
   return (
@@ -13,6 +16,7 @@ function App() {
       <GlobalStyle />
       <Hero />
       <Products heading='Choose your glove' data={productData}/>
+      <ProductCard />
       <Feature />
       <Footer />
     </Router>

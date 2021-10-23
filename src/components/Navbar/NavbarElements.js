@@ -27,12 +27,13 @@ export const NavLink = styled(Link)`
 `;
 
 export const NavIcon = styled.div`
-    display: block;
+    display: inline-block;
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 20x;
+    right: 30px;
     cursor: pointer;
     color: #ffffff;
+
 
     p {
         transform: translate(-175%, 100%);
@@ -43,4 +44,5 @@ export const NavIcon = styled.div`
 export const Bars = styled(GiBoxingGlove)`
     font-size: 2rem;
     transform: translate(-50%, -15%);
+  
 `
