@@ -10,6 +10,7 @@ import Products from './components/Products/Products.jsx';
 import Navbar from './components/Navbar';
 import Sidebar from './components/Sidebar'
 import Cart from './components/Cart/Cart.jsx';
+import Checkout from './components/CheckoutForm/Checkout/Checkout.jsx';
 
 const App = () => {
 
@@ -78,19 +79,24 @@ const App = () => {
           <Hero />
           <Products products={products} onAddToCart={handleAddToCart} /> 
           <Feature />
+          <Footer />
         </Route>
 
         <Route exact path='/cart'>
-          <Cart cart={cart}  
-          handleUpdateCartQty= {handleUpdateCartQty}
-          handleRemoveFromCart= {handleRemoveFromCart}
-          handleEmptyCart= {handleEmptyCart}
-          />
+            <Cart 
+            cart={cart}  
+            handleUpdateCartQty={handleUpdateCartQty}
+            handleRemoveFromCart={handleRemoveFromCart}
+            handleEmptyCart={handleEmptyCart}
+            />
+            <Footer />
+        </Route>
+
+        <Route exact path='/checkout'>
+          <Checkout cart={cart} />
         </Route>
 
         </Switch>
-      
-      <Footer />
       </div>
     </Router>
   );

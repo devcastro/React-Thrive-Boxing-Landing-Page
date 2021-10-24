@@ -34,6 +34,10 @@ export const HeroItems = styled.div`
 @media screen and (max-width: 650px) {
     width: 100%;
 }
+@media screen and (max-width: 440px) {
+    width: 100%;
+    align-items: center;
+}
 `
 
 export const HeroH1 = styled.h1`
