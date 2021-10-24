@@ -8,7 +8,7 @@ const Sidebar = ({isOpen, toggle}) => {
               <CloseIcon />
           </Icon>
           <SidebarMenu>
-            <SidebarLink to="/#">Cart</SidebarLink>
+            <SidebarLink to="/cart">Cart</SidebarLink>
             <SidebarLink to="/#">Gloves</SidebarLink>
             <SidebarLink to="/#">Gear</SidebarLink>
             <SidebarLink to="/#">Contact Us</SidebarLink>
