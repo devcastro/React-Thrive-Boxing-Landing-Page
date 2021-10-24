@@ -7,6 +7,7 @@ export const HeroContainer = styled.div `
     height: 100vh;
     background-position: center;
     background-size: cover;
+    overflow-x: hidden;
 `
 
 export const HeroContent = styled.div`

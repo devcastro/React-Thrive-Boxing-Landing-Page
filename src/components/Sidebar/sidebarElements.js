@@ -37,11 +37,11 @@ export const Icon = styled.div`
 export const SidebarMenu = styled.div`
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 80px);
+    grid-template-rows: repeat(4, 80px);
     text-align: center;
 
     @media screen and (max-width: 480px) {
-        grid-template-rows: repeat(3, 60px);
+        grid-template-rows: repeat(4, 60px);
 
     }
 `;
@@ -65,14 +65,16 @@ export const SidebarLink = styled(Link)`
 `
 
 export const SidebarBtnWrap = styled.div`
-    background: flex;
+    display: flex;
     justify-content: center;
 `
 
 export const SidebarRoute = styled(Link)`
-    background: yellow;
+    background: transparent;
     white-space: nowrap;
     padding: 16px 64px;
+    font-size: 2rem;
+    text-decoration: none;
 
 &:hover {
     transition: 0.2s ease-in-out;

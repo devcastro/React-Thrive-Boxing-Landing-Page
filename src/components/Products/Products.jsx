@@ -7,19 +7,21 @@ import useStyles from "./ProductsElements";
 
 
 
-const Products = ({ products }) => {
-
+const Products = ({ products, onAddToCart }) => {
     const classes = useStyles();
 
     return (
         <main className={classes.content}>
             <div className={classes.toolbar} />
-            <Grid container justify="center" spacing={6}>
+            <Grid
+                container
+                justifyContent="center"
+                spacing={4} >
 
                 {products.map((product) => (
 
                     <Grid item key={product.id} xs={8} sm={5} md={4} lg={3} xl={2}>
-                        <Product product={product} />
+                        <Product product={product} onAddToCart={onAddToCart} />
                     </Grid>
                 ))}
             </Grid>

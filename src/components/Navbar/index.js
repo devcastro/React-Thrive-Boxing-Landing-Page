@@ -3,19 +3,29 @@ import { Nav, NavLink, NavIcon, Bars } from './NavbarElements';
 import { Badge } from '@material-ui/core';
 //import { ShoppingCart } from '@material-ui/icons';
 
-const Navbar = ({ toggle }) => {
+
+const navStyle = {
+    backgroundColor: "black",
+    position: "sticky",
+    top: "0"
+}
+
+
+const Navbar = ({ toggle, totalItems }) => {
     return (
         <>
-            <Nav position='fixed'>
-                <NavLink to='/#'> T h r i v e </NavLink>
+        <div style={navStyle} >
+            <Nav container position='fixed' >
+                <NavLink to='/#' > T h r i v e </NavLink>
                 <NavIcon onClick={toggle} >
                 
                 <p>Menu</p>
-                    <Badge badgeContent={2} color='secondary'>
+                    <Badge badgeContent={totalItems} color='secondary'>
                         <Bars /> 
                     </Badge>
                 </NavIcon>
             </Nav>
+            </div>
         </>
     );
 };
