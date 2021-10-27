@@ -27,7 +27,7 @@ const Navbar = ({ toggle, totalItems }) => {
                 <NavIcon onClick={toggle} >
                     <p>Menu</p>
                    
-                    <Badge badgeContent={totalItems} color='secondary'>
+                    <Badge badgeContent={totalItems} color='secondary' max={20}>
                         <Bars /> 
                     </Badge> 
                    

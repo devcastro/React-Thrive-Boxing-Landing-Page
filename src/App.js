@@ -17,6 +17,9 @@ const App = () => {
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState({});
   const [isOpen, setIsOpen] = useState(false)
+  const [order, setOrder] = useState({});
+  
+  const [errorMessage, setErrorMessage] = useState('')
 
     const toggle = () => {
         setIsOpen(!isOpen)
@@ -57,11 +60,28 @@ const App = () => {
     setCart(cart);
   }
 
+    const refreshCart = async () => {
+      const newCart = await commerce.cart.refresh();
+
+      setCart(newCart);
+    }
+
+    const handleCaptureCheckout = async (checkoutTokenId, newOrder) => {
+      
+      try{
+      const incomingOrder = await commerce.cart.capture(checkoutTokenId, newOrder);
+
+      setOrder(incomingOrder);
+      refreshCart();
+    } catch (error){
+      setErrorMessage(error.data.error.message);
+    }
+  }
 
   useEffect(() => {
       fetchProducts();
       fetchCart();
-  }, []);
+  }, []); 
 
 
   return (
@@ -70,8 +90,8 @@ const App = () => {
       <div>
 
       
-      <Navbar  toggle={toggle} />
-      <Sidebar isOpen={isOpen} toggle={toggle}/>
+      <Navbar  toggle={toggle} totalItems={cart.total_items} />
+      <Sidebar isOpen={isOpen} toggle={toggle} totalItems={cart.total_items} />
      
         <Switch>
         
@@ -93,7 +113,13 @@ const App = () => {
         </Route>
 
         <Route exact path='/checkout'>
-          <Checkout cart={cart} />
+          <Checkout 
+            cart={cart}
+            order={order}
+            onCaptureCheckout={handleCaptureCheckout}
+            error={errorMessage}
+
+          />
         </Route>
 
         </Switch>
